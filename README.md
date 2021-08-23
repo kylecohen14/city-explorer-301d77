@@ -1,71 +1,74 @@
-# Getting Started with Create React App
+# City-explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Author**: Kyle Cohen
+**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
-## Available Scripts
+## Overview
+- a React application that uses the Axios library to make user-initiated reqeusts for data from a thrid-party API.
 
-In the project directory, you can run:
+## Getting Started
+- Create-react-app, connect to github, config, config API, connect api, build code. 
 
-### `npm start`
+## Architecture
+Use react to build a WRRC that allows a user to search for a desired city and recieve a response with the correct data
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Change Log
+Monday Aug 23- Build basic app and config
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Credit and Collaborations
+<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
-### `npm test`
+Name of feature: ____Lab 06________
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Estimate of time needed to complete: _2.5hours_
 
-### `npm run build`
+Start time: _4:50_
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Finish time: _____
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Actual time needed to complete: _____
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Name of feature: ________________________________
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Estimate of time needed to complete: _____
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start time: _____
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Finish time: _____
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Actual time needed to complete: _____
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Name of feature: ________________________________
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Estimate of time needed to complete: _____
 
-### Code Splitting
+Start time: _____
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Finish time: _____
 
-### Analyzing the Bundle Size
+Actual time needed to complete: _____
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Name of feature: ________________________________
 
-### Advanced Configuration
+Estimate of time needed to complete: _____
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Start time: _____
 
-### Deployment
+Finish time: _____
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Actual time needed to complete: _____
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# city-explorer-301d77
+Name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
