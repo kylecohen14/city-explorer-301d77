@@ -16,6 +16,7 @@ class App extends React.Component {
     const res = await axios.get(LocationAPI);
     this.setState({ cityLocation: res.data[0] });
   }
+  
   render() {
     return (
       <div>
