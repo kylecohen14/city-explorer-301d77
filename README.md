@@ -1,3 +1,4 @@
+
 # City-explorer
 
 **Author**: Kyle Cohen
@@ -24,9 +25,12 @@ Estimate of time needed to complete: _2.5hours_
 
 Start time: _4:50_
 
-Finish time: _____
+Finish time: __8:56___
 
-Actual time needed to complete: _____
+Actual time needed to complete: _4hr____
+![Screenshot (275)](https://user-images.githubusercontent.com/84685827/130538445-7cda05dd-e98e-4e17-a66d-83213e7d165f.png)
+
+
 
 
 Name of feature: ________________________________
