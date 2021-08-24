@@ -35,7 +35,6 @@ class App extends React.Component {
     }
   }
 
-
 closeError = () => {
   this.setState({showError: false});
 }
