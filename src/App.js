@@ -3,7 +3,7 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import './App.css';
 import Alert from 'react-bootstrap/Alert';
-import Button from 'react-bootstrap/button';
+import Button from 'react-bootstrap/Button';
 
 class App extends React.Component {
   constructor(props) {
