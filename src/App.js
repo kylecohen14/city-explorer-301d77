@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import './App.css';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
+import Weather from './Weather.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class App extends React.Component {
       cityLocation: {},
       map: '',
       errors: '',
-      showError: false
+      showError: false,
+      forecastArr: []
     }
     this.closeError=this.closeError.bind(this);
   }
@@ -25,6 +27,8 @@ class App extends React.Component {
     const res = await axios.get(LocationAPI);
     this.setState({ cityLocation: res.data[0] });
 
+    this.Weather();
+
     const MAP = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_EXPLORER_KEY}&center=${this.state.cityLocation.lat},${this.state.cityLocation.lon}&zoom=14`;
     const mapRes = await axios.get(MAP);
     this.setState({map: mapRes.config.url})
@@ -34,13 +38,28 @@ class App extends React.Component {
     this.setState({errors: error.message, showError: true})
     }
   }
+  Weather = async () => {
+    const getWeather = `http://localhost:3001/weather?searchQuery=${this.state.searchQuery}`;
+    // &lat=${this.state.location.lat}&lon=${this.state.location.lon}
+      try {
+      const weatherRes = await axios.get(getWeather)
+      console.log(getWeather)
+      this.setState({forecastArr: weatherRes.data})
+      console.log(this.state.forecastArr);
+      }catch (error) {
+        this.setState({ errors: error.message, showError: true })
+      }
+  }
+
 
 closeError = () => {
   this.setState({showError: false});
 }
 
 
+
   render() {
+    // console.log(state);
     return (
       <div>
         <Alert show={this.state.showError} variant='warning'>
@@ -58,6 +77,10 @@ closeError = () => {
               <Card.Text>Latitude: {this.state.cityLocation.lat}</Card.Text>
               <Card.Text>Longitude: {this.state.cityLocation.lon}</Card.Text>
               <Card.Img src ={this.state.map} alt='map of city' />
+
+              {this.state.forecastArr.length>0 &&
+              <Weather getWeather={this.state.forecastArr} searchQuery={this.state.searchQuery} />}
+              
             </>
               }
           </Card.Body>
