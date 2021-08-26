@@ -33,15 +33,17 @@ Actual time needed to complete: _4hr____
 
 
 
-Name of feature: ________________________________
+Name of feature: _____lab 07________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: __6hr___
 
-Start time: _____
+Start time: __4pm Tuesday/ 4pmwed___
 
-Finish time: _____
+Finish time: _9pm tuesday/ 8pm wed____
 
-Actual time needed to complete: _____
+Actual time needed to complete: __9hr
+![Screenshot (278)](https://user-images.githubusercontent.com/84685827/130880682-ffa37a7c-2d7c-4a43-b35e-0beaf6df6e38.png)
+___
 
 
 Name of feature: ________________________________
