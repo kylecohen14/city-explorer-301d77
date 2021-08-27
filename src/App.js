@@ -5,6 +5,8 @@ import './App.css';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Weather from './Weather.js';
+import Movies from './Movies.js';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -15,7 +17,8 @@ class App extends React.Component {
       map: '',
       errors: '',
       showError: false,
-      forecastArr: []
+      forecastArr: [],
+      moviesArr: []
     }
     this.closeError=this.closeError.bind(this);
   }
@@ -28,6 +31,7 @@ class App extends React.Component {
     this.setState({ cityLocation: res.data[0] });
 
     this.Weather();
+    this.Movies();
 
     const MAP = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_EXPLORER_KEY}&center=${this.state.cityLocation.lat},${this.state.cityLocation.lon}&zoom=14`;
     const mapRes = await axios.get(MAP);
@@ -39,13 +43,28 @@ class App extends React.Component {
     }
   }
   Weather = async () => {
-    const getWeather = `http://localhost:3001/weather?searchQuery=${this.state.searchQuery}`;
-    // &lat=${this.state.location.lat}&lon=${this.state.location.lon}
+    // const getWeather = `http://localhost:3001/weather?searchQuery=${this.state.searchQuery}&lat=${this.state.cityLocation.lat}&lon=${this.state.cityLocation.lon}`;
+    const getWeather = `https://cityexplorer-301d77.herokuapp.com/weather?searchQuery=${this.state.searchQuery}&lat=${this.state.cityLocation.lat}&lon=${this.state.cityLocation.lon}`;
+
+    
       try {
       const weatherRes = await axios.get(getWeather)
-      console.log(getWeather)
       this.setState({forecastArr: weatherRes.data})
-      console.log(this.state.forecastArr);
+      }catch (error) {
+        this.setState({ errors: error.message, showError: true })
+      }
+  }
+
+  Movies = async () => {
+    // const getMovies = `http://localhost:3001/movies?searchQuery=${this.state.searchQuery}`;
+    // console.log(getMovies);
+    const getMovies = `https://cityexplorer-301d77.herokuapp.com/movies?searchQuery=${this.state.searchQuery}`;
+
+      try {
+      const moviesRes = await axios.get(getMovies)
+      console.log(getMovies)
+      this.setState({moviesArr: moviesRes.data})
+      console.log(this.state.moviesArr);
       }catch (error) {
         this.setState({ errors: error.message, showError: true })
       }
@@ -80,7 +99,8 @@ closeError = () => {
 
               {this.state.forecastArr.length>0 &&
               <Weather getWeather={this.state.forecastArr} searchQuery={this.state.searchQuery} />}
-              
+               {this.state.moviesArr.length>0 &&
+              <Movies getMovies={this.state.moviesArr} searchQuery={this.state.searchQuery}/>}
             </>
               }
           </Card.Body>
