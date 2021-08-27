@@ -6,6 +6,7 @@ import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Weather from './Weather.js';
 import Movies from './Movies.js';
+import LocationInfo from './components/LocationInfo';
 
 
 class App extends React.Component {
@@ -92,13 +93,11 @@ closeError = () => {
             <button onClick={this.getLocation}>Explore</button>
             {this.state.cityLocation.place_id &&
             <>
-              <Card.Title>City Name: {this.state.cityLocation.display_name}</Card.Title>
-              <Card.Text>Latitude: {this.state.cityLocation.lat}</Card.Text>
-              <Card.Text>Longitude: {this.state.cityLocation.lon}</Card.Text>
-              <Card.Img src ={this.state.map} alt='map of city' />
+              <LocationInfo location={this.state.cityLocation} lat={this.state.lat} lon={this.state.lon} map={this.state.map} />
 
               {this.state.forecastArr.length>0 &&
               <Weather getWeather={this.state.forecastArr} searchQuery={this.state.searchQuery} />}
+
                {this.state.moviesArr.length>0 &&
               <Movies getMovies={this.state.moviesArr} searchQuery={this.state.searchQuery}/>}
             </>

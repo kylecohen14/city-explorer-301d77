@@ -16,9 +16,13 @@ Use react to build a WRRC that allows a user to search for a desired city and re
 
 ## Change Log
 Monday Aug 23- Build basic app and config
+Tues- Back end talking to front
+Wed - hit an API
+Thurs - Refractored back and front
+Fri- Used cache
 
 ## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+Worked at a table with Tray for a majority of the week, helping each other throughout the week.
 
 Name of feature: ____Lab 06________
 
@@ -60,15 +64,15 @@ Actual time needed to complete: _6.5hr___
 ![Screenshot (279)](https://user-images.githubusercontent.com/84685827/131052296-ad21f1b8-1a2a-4185-94c6-34cc0e5cfe0a.png)
 
 
-Name of feature: ________________________________
+Name of feature: _________lab 09____________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: __3hr_
 
-Start time: _____
+Start time: _9am, 4pm__
 
-Finish time: _____
+Finish time: _11am, ____
 
-Actual time needed to complete: _____
+Actual time needed to complete: _3.5_
 
 
 Name of feature: ________________________________

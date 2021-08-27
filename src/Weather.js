@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
+import SingleDayWeather from './components/singleDayWeather.js';
 
 class Weather extends React.Component {
   render(){
@@ -7,9 +7,7 @@ class Weather extends React.Component {
     return(
       <div>
         {this.props.getWeather.map((value, idx) => (
-        <Card key={idx} bg='danger' border="primary" style={{width: '16rem'}}>
-          <Card.Text>Weather forecast: low of {value.low_temp} degrees, high of {value.max_temp} degrees, with {value.description}, Date: {value.date}</Card.Text>
-        </Card>
+          <SingleDayWeather key={idx} value={value} />
         )
         )}
       </div>
